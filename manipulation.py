@@ -2,7 +2,7 @@ import openpyxl
 import logging
 import sys
 addr=(str(sys.argv[1])).replace("\\","\\"+"\\")
-newaddr=addr.replace(addr[:rfind(".")],addr[:rfind(".")]+"_new")
+newaddr=addr.replace(addr[:addr.rfind(".")],addr[:addr.rfind(".")]+"_new")
 logging.basicConfig(filename='manipulation_log.log',level=logging.DEBUG,format='%(asctime)s %(levelname)s %(message)s')
 def updatedString(string):
     ListofSubstring=string.split("\n")
